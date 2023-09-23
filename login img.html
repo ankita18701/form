@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.mdiv
+		{
+			height: 100vh;
+			width: 100%;
+			background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/iss061e110433.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+		.lgnfrm
+		{
+			color: white;
+			width: 200px;
+			height: 200px;
+			margin: 15% 35%;
+		}
+		input
+		{
+			width: 95%;
+			margin-top:10px;
+			height: 20px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid white;
+			color: white;
+			text-align: center;
+			font-weight: bolder;
+		}
+		input:focus
+		{
+			outline: none;
+		}
+		.heading
+		{
+           color: white;
+           letter-spacing: 4px;
+           font-size: 30px;
+           font-family: Elephant;
+           font-weight: bolder;
+		}
+		input[type="button"]
+		{
+			border: none;
+			background-color: whitesmoke;
+			height: 30px;
+			color: black;
+			font-size: 15px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			transition-duration: 1s;
+		}
+		input[type="button"]:hover
+		{
+			background-color: transparent;
+			color: white;
+			border: 2px solid white;
+			transform: scale(1,1);
+			cursor: pointer;
+		}
+		a
+		{
+            text-decoration: none;
+            color: white;
+		}
+	</style>
+</head>
+<body>
+<div class="mdiv">
+	<div class="lgnfrm" align="center">
+		<font autocomplete="off">
+			<h2 class="head">LOGIN</h2>
+			<input type="text" name="username" placeholder="username" class="ip1" id="usr">
+			<input type="text" name="pwd" placeholder="password" style="margin-bottom: 10px;" class="ip1" id="pass">
+			<span><a href="#"> Forgot password?</a></span>
+			<input type="button" name="lgn" value="LOGIN" onclick="validate()">
+			<span><a href="#"> Create Account</a></span>
+		</font>
+	</div>
+</div>
+<script type="text/javascript">
+	let usr1="pandey";
+	let pass="ankita";
+
+	function validate()
+	 {
+		let use2= document.getElementById("usr").value;
+		let pass2=document.getElementById("pass").value;
+
+		 if((usr1===usr2)&&(pass1===pass2))
+		 {
+		 	open('HomePage.html');
+		 }
+		 else{
+		 	alert("WRONG CREDENTIALS")
+		 }
+	}
+</script>
+</body>
+</html>
